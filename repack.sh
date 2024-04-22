@@ -1,10 +1,10 @@
 #!/bin/sh
 
-COMMON_VERSION="0.5.1"
+COMMON_VERSION="0.5.2"
 
 epm tool eget https://raw.githubusercontent.com/alt-autorepacked/common/v$COMMON_VERSION/common.sh
 . ./common.sh
-rm common.sh
+rm ./common.sh
 
 _package="Trezor-Suite"
 
