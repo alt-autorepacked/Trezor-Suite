@@ -19,7 +19,7 @@ jobs:
         arch:
           - amd64
           - arm64
-    uses: alt-autorepacked/common/.github/workflows/update.yml@v0.4.0
+    uses: alt-autorepacked/common/.github/workflows/update.yml@v0.5.0
     with:
       branch: ${{ matrix.branch }}
       arch: ${{ matrix.arch }}

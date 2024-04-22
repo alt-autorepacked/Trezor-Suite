@@ -1,6 +1,6 @@
 #!/bin/sh
 
-COMMON_VERSION="0.4.0"
+COMMON_VERSION="0.5.0"
 
 epm tool eget https://raw.githubusercontent.com/alt-autorepacked/common/v$COMMON_VERSION/common.sh
 . ./common.sh
