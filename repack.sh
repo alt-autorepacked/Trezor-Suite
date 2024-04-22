@@ -1,9 +1,10 @@
 #!/bin/sh
 
-COMMON_VERSION="0.5.0"
+COMMON_VERSION="0.5.1"
 
 epm tool eget https://raw.githubusercontent.com/alt-autorepacked/common/v$COMMON_VERSION/common.sh
 . ./common.sh
+rm common.sh
 
 _package="Trezor-Suite"
 
@@ -29,11 +30,10 @@ remote_version=$(_check_version_from_remote)
 if [ "$remote_version" != "$download_version" ]; then
     _download_from_github
     _add_repo_suffix
+    _check_install
     TAG="v$download_version"
     _create_release
     echo "Release created: $TAG"
 else
     echo "No new version to release. Current version: $download_version"
 fi
-
-rm common.sh
